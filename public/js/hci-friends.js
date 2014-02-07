@@ -3,8 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+	$(".friends a").click(listener);
 })
 
+function listener() {
+	var oldname = $(this).text();
+	$(this).text(anagrammedName(oldname));
+}
 /*
  * Function that is called when the document is ready.
  */
